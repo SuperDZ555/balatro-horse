@@ -19,7 +19,7 @@ SMODS.Joker{ --Prideful Horse
         }
     },
     pos = {
-        x = 6,
+        x = 9,
         y = 2
     },
     display_size = {

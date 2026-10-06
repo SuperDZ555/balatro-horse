@@ -36,8 +36,8 @@ SMODS.Joker{ --Glitched Horse
         }
     },
     pos = {
-        x = 9,
-        y = 2
+        x = 2,
+        y = 3
     },
     display_size = {
         w = 71 * 1, 

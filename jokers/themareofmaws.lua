@@ -18,8 +18,8 @@ SMODS.Joker{ --The Mare of Maws
         }
     },
     pos = {
-        x = 7,
-        y = 3
+        x = 4,
+        y = 4
     },
     display_size = {
         w = 71 * 1, 
@@ -35,8 +35,8 @@ SMODS.Joker{ --The Mare of Maws
     atlas = 'CustomJokers',
     pools = { ["horse_horse_legendaries"] = true },
     soul_pos = {
-        x = 8,
-        y = 3
+        x = 5,
+        y = 4
     },
     in_pool = function(self, args)
         return (

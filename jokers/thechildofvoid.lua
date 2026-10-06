@@ -20,8 +20,8 @@ SMODS.Joker{ --The Child of Void
         }
     },
     pos = {
-        x = 3,
-        y = 4
+        x = 0,
+        y = 5
     },
     display_size = {
         w = 71 * 1, 
@@ -37,8 +37,8 @@ SMODS.Joker{ --The Child of Void
     atlas = 'CustomJokers',
     pools = { ["horse_horse_legendaries"] = true },
     soul_pos = {
-        x = 4,
-        y = 4
+        x = 1,
+        y = 5
     },
     in_pool = function(self, args)
         return (

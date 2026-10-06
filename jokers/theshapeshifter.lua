@@ -16,7 +16,7 @@ SMODS.Joker{ --The Shapeshifter
         }
     },
     pos = {
-        x = 1,
+        x = 8,
         y = 4
     },
     display_size = {
@@ -33,7 +33,7 @@ SMODS.Joker{ --The Shapeshifter
     atlas = 'CustomJokers',
     pools = { ["horse_horse_legendaries"] = true },
     soul_pos = {
-        x = 2,
+        x = 9,
         y = 4
     },
     in_pool = function(self, args)

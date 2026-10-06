@@ -18,7 +18,7 @@ SMODS.Joker{ --Scribble Horse
         }
     },
     pos = {
-        x = 7,
+        x = 8,
         y = 1
     },
     display_size = {

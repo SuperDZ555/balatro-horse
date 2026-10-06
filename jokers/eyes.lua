@@ -9,7 +9,7 @@ SMODS.Joker{ --:eyes:
     loc_txt = {
         ['name'] = ':eyes:',
         ['text'] = {
-            [1] = 'This Joker gains {C:red}+8{} Mult every time',
+            [1] = 'This Joker gains {C:red}+3{} Mult every time',
             [2] = 'the Joker to the left is triggered',
             [3] = '{C:inactive}(Currently{} {C:red}+#1#{} {C:inactive}Mult){}'
         },
@@ -18,8 +18,8 @@ SMODS.Joker{ --:eyes:
         }
     },
     pos = {
-        x = 8,
-        y = 2
+        x = 1,
+        y = 3
     },
     display_size = {
         w = 71 * 1, 
@@ -47,7 +47,7 @@ SMODS.Joker{ --:eyes:
 					if context.other_card == (G.jokers.cards[i - 1] or 0) then
 						return {
 							func = function()
-								card.ability.extra.mult = (card.ability.extra.mult) + 8
+								card.ability.extra.mult = (card.ability.extra.mult) + 3
 								return true
 							end,
 							message = ":eyes:"

@@ -1,30 +1,33 @@
 
-SMODS.Joker{ --Honse
-    key = "honse",
+SMODS.Joker{ --Bald Horse
+    key = "baldhorse",
     config = {
         extra = {
-            dollars0 = 3
+            currentscoringchips = 0,
+            blindchiprequirement = 0,
+            dollars0 = 2
         }
     },
     loc_txt = {
-        ['name'] = 'Honse',
+        ['name'] = 'Bald Horse',
         ['text'] = {
-            [1] = 'Every scoring {C:attention}face{} or {C:attention}Ace{} card gives {C:money}$3{}'
+            [1] = 'Gain {C:money}$2{} if played hand scores less',
+            [2] = 'than {C:attention}10%{} of required chips'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 4,
-        y = 3
+        x = 2,
+        y = 1
     },
     display_size = {
         w = 71 * 1, 
         h = 95 * 1
     },
-    cost = 9,
-    rarity = 3,
+    cost = 5,
+    rarity = 1,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
@@ -33,18 +36,23 @@ SMODS.Joker{ --Honse
     atlas = 'CustomJokers',
     pools = { ["horse_horse_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {((G.GAME.blind.chips or 0)) * 0.1}}
+    end,
+    
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play  then
-            if (context.other_card:is_face() or context.other_card:get_id() == 14) then
+        if context.after and context.cardarea == G.jokers  then
+            if SMODS.last_hand_score < to_big((G.GAME.blind.chips) * 0.1) then
                 return {
                     
                     func = function()
                         
                         local current_dollars = G.GAME.dollars
-                        local target_dollars = G.GAME.dollars + 3
+                        local target_dollars = G.GAME.dollars + 2
                         local dollar_value = target_dollars - current_dollars
                         ease_dollars(dollar_value)
-                        card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "+"..tostring(3), colour = G.C.MONEY})
+                        card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "+"..tostring(2), colour = G.C.MONEY})
                         return true
                     end
                 }

@@ -17,8 +17,8 @@ SMODS.Joker{ --The Flower
         }
     },
     pos = {
-        x = 5,
-        y = 4
+        x = 2,
+        y = 5
     },
     display_size = {
         w = 71 * 1, 
@@ -34,8 +34,8 @@ SMODS.Joker{ --The Flower
     atlas = 'CustomJokers',
     pools = { ["horse_horse_legendaries"] = true },
     soul_pos = {
-        x = 6,
-        y = 4
+        x = 3,
+        y = 5
     },
     in_pool = function(self, args)
         return (

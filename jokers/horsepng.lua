@@ -15,7 +15,7 @@ SMODS.Joker{ --horse.png
         }
     },
     pos = {
-        x = 4,
+        x = 7,
         y = 2
     },
     display_size = {

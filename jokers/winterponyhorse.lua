@@ -3,20 +3,20 @@ SMODS.Joker{ --Winterpony Horse
     key = "winterponyhorse",
     config = {
         extra = {
-            xchips0 = 1.5
+            xchips0 = 1.25
         }
     },
     loc_txt = {
         ['name'] = 'Winterpony Horse',
         ['text'] = {
-            [1] = '{X:blue,C:white}X1.5{} Chips'
+            [1] = '{X:blue,C:white}X1.25{} Chips'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 8,
+        x = 9,
         y = 1
     },
     display_size = {
@@ -36,7 +36,7 @@ SMODS.Joker{ --Winterpony Horse
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             return {
-                x_chips = 1.5
+                x_chips = 1.25
             }
         end
     end

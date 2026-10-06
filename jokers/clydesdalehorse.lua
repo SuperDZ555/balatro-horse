@@ -21,7 +21,7 @@ SMODS.Joker{ --Clydesdale Horse
         }
     },
     pos = {
-        x = 3,
+        x = 4,
         y = 1
     },
     display_size = {

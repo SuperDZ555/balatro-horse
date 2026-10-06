@@ -51,6 +51,7 @@ if true then
     assert(SMODS.load_file("jokers/flippedhorse.lua"))()
     assert(SMODS.load_file("jokers/horze.lua"))()
     assert(SMODS.load_file("jokers/glasshorse.lua"))()
+    assert(SMODS.load_file("jokers/baldhorse.lua"))()
     assert(SMODS.load_file("jokers/appaloosahorse.lua"))()
     assert(SMODS.load_file("jokers/clydesdalehorse.lua"))()
     assert(SMODS.load_file("jokers/flamemarehorse.lua"))()
@@ -60,6 +61,8 @@ if true then
     assert(SMODS.load_file("jokers/winterponyhorse.lua"))()
     assert(SMODS.load_file("jokers/hooorse.lua"))()
     assert(SMODS.load_file("jokers/blurryhorse.lua"))()
+    assert(SMODS.load_file("jokers/whiteandgoldhorse.lua"))()
+    assert(SMODS.load_file("jokers/blackandbluehorse.lua"))()
     assert(SMODS.load_file("jokers/trojanhorse.lua"))()
     assert(SMODS.load_file("jokers/unicorn.lua"))()
     assert(SMODS.load_file("jokers/statuehorse.lua"))()
@@ -76,12 +79,17 @@ if true then
     assert(SMODS.load_file("jokers/bsodhorse.lua"))()
     assert(SMODS.load_file("jokers/statichorse.lua"))()
     assert(SMODS.load_file("jokers/crownedhorse.lua"))()
+    assert(SMODS.load_file("jokers/horsecube.lua"))()
+    assert(SMODS.load_file("jokers/giraffe.lua"))()
+    assert(SMODS.load_file("jokers/deadhorse.lua"))()
+    assert(SMODS.load_file("jokers/fauxbrownhorse.lua"))()
     assert(SMODS.load_file("jokers/themareofmaws.lua"))()
     assert(SMODS.load_file("jokers/theartist.lua"))()
     assert(SMODS.load_file("jokers/theshapeshifter.lua"))()
     assert(SMODS.load_file("jokers/thechildofvoid.lua"))()
     assert(SMODS.load_file("jokers/theflower.lua"))()
-    assert(SMODS.load_file("jokers/horsecube.lua"))()
+    assert(SMODS.load_file("jokers/thecreature.lua"))()
+    assert(SMODS.load_file("jokers/thesharktailedhorse.lua"))()
 end
 
 --load sounds
@@ -116,6 +124,7 @@ SMODS.ObjectType({
         ["j_horse_flippedhorse"] = true,
         ["j_horse_horze"] = true,
         ["j_horse_glasshorse"] = true,
+        ["j_horse_baldhorse"] = true,
         ["j_horse_appaloosahorse"] = true,
         ["j_horse_clydesdalehorse"] = true,
         ["j_horse_flamemarehorse"] = true,
@@ -125,6 +134,8 @@ SMODS.ObjectType({
         ["j_horse_winterponyhorse"] = true,
         ["j_horse_hooorse"] = true,
         ["j_horse_blurryhorse"] = true,
+        ["j_horse_whiteandgoldhorse"] = true,
+        ["j_horse_blackandbluehorse"] = true,
         ["j_horse_unicorn"] = true,
         ["j_horse_statuehorse"] = true,
         ["j_horse_horsepng"] = true,
@@ -139,12 +150,10 @@ SMODS.ObjectType({
         ["j_horse_bsodhorse"] = true,
         ["j_horse_statichorse"] = true,
         ["j_horse_crownedhorse"] = true,
-        ["j_horse_themareofmaws"] = true,
-        ["j_horse_theartist"] = true,
-        ["j_horse_theshapeshifter"] = true,
-        ["j_horse_thechildofvoid"] = true,
-        ["j_horse_theflower"] = true,
-        ["j_horse_horsecube"] = true
+        ["j_horse_horsecube"] = true,
+        ["j_horse_giraffe"] = true,
+        ["j_horse_deadhorse"] = true,
+        ["j_horse_fauxbrownhorse"] = true
     },
 })
 
@@ -182,20 +191,22 @@ SMODS.ObjectType({
 })
 
 SMODS.ObjectType({
+    key = "horse_the_horse",
+    cards = {
+        ["j_horse_thehorse"] = true
+    },
+})
+
+SMODS.ObjectType({
     key = "horse_horse_legendaries",
     cards = {
         ["j_horse_themareofmaws"] = true,
         ["j_horse_theartist"] = true,
         ["j_horse_theshapeshifter"] = true,
         ["j_horse_thechildofvoid"] = true,
-        ["j_horse_theflower"] = true
-    },
-})
-
-SMODS.ObjectType({
-    key = "horse_the_horse",
-    cards = {
-        ["j_horse_thehorse"] = true
+        ["j_horse_theflower"] = true,
+        ["j_horse_thecreature"] = true,
+        ["j_horse_thesharktailedhorse"] = true
     },
 })
 

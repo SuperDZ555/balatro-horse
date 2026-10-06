@@ -1,25 +1,25 @@
 
-SMODS.Joker{ --Hor
-    key = "hor",
+SMODS.Joker{ --Giraffe
+    key = "giraffe",
     config = {
         extra = {
-            mult = 0
+            cardsremovedfromdeck = 0
         }
     },
     loc_txt = {
-        ['name'] = 'Hor',
+        ['name'] = 'Giraffe',
         ['text'] = {
-            [1] = 'This Joker gains {C:red}+4{} Mult',
-			[2] = 'when each played 2 is scored',
-            [3] = '{C:inactive}(Currently {}{C:red}+#1#{}{C:inactive} Mult){}'
+            [1] = '{C:red}+3{} Mult for each card above',
+            [2] = '{C:attention}#1#{} cards in your full deck',
+            [3] = '{C:inactive}(Currently{} {C:red}+#2#{} {C:inactive}Mult){}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 0,
-        y = 3
+        x = 1,
+        y = 4
     },
     display_size = {
         w = 71 * 1, 
@@ -37,18 +37,13 @@ SMODS.Joker{ --Hor
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.mult}}
+        return {vars = {(G.GAME.starting_deck_size or 52), math.max(0,(((#(G.playing_cards or {}) - G.GAME.starting_deck_size) or 0)) * 3)}}
     end,
     
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play  then
-            if context.other_card:get_id() == 2 then
-                card.ability.extra.mult = (card.ability.extra.mult) + 4
-            end
-        end
         if context.cardarea == G.jokers and context.joker_main  then
             return {
-                mult = card.ability.extra.mult
+                mult = math.max(0,(((#(G.playing_cards or {}) - G.GAME.starting_deck_size) or 0)) * 3)
             }
         end
     end

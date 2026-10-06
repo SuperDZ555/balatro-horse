@@ -17,7 +17,7 @@ SMODS.Joker{ --Appaloosa Horse
         }
     },
     pos = {
-        x = 2,
+        x = 3,
         y = 1
     },
     display_size = {

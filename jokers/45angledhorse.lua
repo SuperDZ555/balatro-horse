@@ -20,7 +20,7 @@ SMODS.Joker{ --45° Angled Horse
         }
     },
     pos = {
-        x = 2,
+        x = 5,
         y = 3
     },
     display_size = {

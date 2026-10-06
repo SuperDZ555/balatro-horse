@@ -21,7 +21,7 @@ SMODS.Joker{ --Demon Horse
         }
     },
     pos = {
-        x = 6,
+        x = 7,
         y = 1
     },
     display_size = {

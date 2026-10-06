@@ -16,7 +16,7 @@ SMODS.Joker{ --Statue Horse
         }
     },
     pos = {
-        x = 3,
+        x = 6,
         y = 2
     },
     display_size = {

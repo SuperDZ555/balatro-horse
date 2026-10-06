@@ -18,7 +18,7 @@ SMODS.Joker{ --Flamemare Horse
         }
     },
     pos = {
-        x = 4,
+        x = 5,
         y = 1
     },
     display_size = {

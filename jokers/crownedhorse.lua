@@ -17,7 +17,7 @@ SMODS.Joker{ --Crowned Horse
         }
     },
     pos = {
-        x = 6,
+        x = 9,
         y = 3
     },
     display_size = {

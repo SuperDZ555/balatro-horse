@@ -1,29 +1,29 @@
 
-SMODS.Joker{ --Horse Cube
-    key = "horsecube",
+SMODS.Joker{ --Brown Horse...?
+    key = "fauxbrownhorse",
     config = {
         extra = {
             xchips0 = 3
         }
     },
     loc_txt = {
-        ['name'] = 'Horse Cube',
+        ['name'] = 'Brown Horse...?',
         ['text'] = {
-            [1] = '{X:blue,C:white}X3{} Chips if played hand contains exactly three {C:attention}3{}s'
+            [1] = '{X:blue,C:white}X3{} Chips on {C:attention}boss blinds{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 0,
+        x = 3,
         y = 4
     },
     display_size = {
         w = 71 * 1, 
         h = 95 * 1
     },
-    cost = 9,
+    cost = 10,
     rarity = 3,
     blueprint_compat = true,
     eternal_compat = true,
@@ -35,17 +35,16 @@ SMODS.Joker{ --Horse Cube
     
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
-            if (function()
-                local count = 0
-                for _, playing_card in pairs(context.scoring_hand or {}) do
-                    if playing_card:get_id() == 3 then
-                        count = count + 1
-                    end
-                end
-                return count == 3
-            end)() then
+            if G.GAME.blind.boss then
                 return {
                     x_chips = 3
+                }
+            end
+        end
+        if context.end_of_round and context.game_over and context.main_eval  then
+            if G.GAME.blind.boss then
+                return {
+                    message = "Pitiful."
                 }
             end
         end
