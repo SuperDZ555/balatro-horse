@@ -34,7 +34,7 @@ SMODS.Joker{ --Flipped Horse
     pools = { ["horse_horse_jokers"] = true, ["horse_common_horses"] = true },
     
     calculate = function(self, card, context)
-        if context.before and context.cardarea == G.jokers  and not context.blueprint then
+        if context.initial_scoring_step and context.cardarea == G.jokers  and not context.blueprint then
             return {
                 swap = true,
                 message = "!pliF"
