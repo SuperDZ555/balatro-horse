@@ -38,12 +38,12 @@ SMODS.Joker{ --Bald Horse
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {((G.GAME.blind.chips or 0)) * 0.1}}
+        return {vars = {(((G.GAME.blind ~= nil) and G.GAME.blind.chips or 0)) * 0.1}}
     end,
     
     calculate = function(self, card, context)
         if context.after and context.cardarea == G.jokers  then
-            if SMODS.last_hand_score < to_big((G.GAME.blind.chips) * 0.1) then
+            if SMODS.last_hand_score < to_big(((G.GAME.blind ~= nil) and G.GAME.blind.chips or 0) * 0.1) then
                 return {
                     
                     func = function()
