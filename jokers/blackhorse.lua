@@ -9,7 +9,8 @@ SMODS.Joker{ --Black Horse
     loc_txt = {
         ['name'] = 'Black Horse',
         ['text'] = {
-            [1] = 'Add half of current {C:blue}Chips{} to {C:red}Mult{}'
+            [1] = 'Add half of current {C:blue}Chips{} to {C:red}Mult{}',
+			[2] = '{C:inactive}Max of {C:attention}100%{C:inactive} of {C:red}Mult{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -41,7 +42,7 @@ SMODS.Joker{ --Black Horse
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             return {
-                mult = hand_chips/2
+                mult = math.min(hand_chips/2,mult)
             }
         end
     end
