@@ -1,12 +1,12 @@
 
-SMODS.Joker{ --The Horse
+SMODS.Joker{ --Realistic Horse
     key = "thehorse",
     config = {
         extra = {
         }
     },
     loc_txt = {
-        ['name'] = 'The Horse',
+        ['name'] = 'Realistic Horse',
         ['text'] = {
             [1] = 'When Blind is selected, create a {C:money}Negative{}',
             [2] = '{C:enhanced}Perishable{} {C:common}Common{} or {C:uncommon}Uncommon{} Horse'
