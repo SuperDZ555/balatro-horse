@@ -90,6 +90,9 @@ if true then
     assert(SMODS.load_file("jokers/theflower.lua"))()
     assert(SMODS.load_file("jokers/thecreature.lua"))()
     assert(SMODS.load_file("jokers/thesharktailedhorse.lua"))()
+	assert(SMODS.load_file("jokers/househorse.lua"))()
+    assert(SMODS.load_file("jokers/shyhorse.lua"))()
+    assert(SMODS.load_file("jokers/cringehorse.lua"))()
 end
 
 --load sounds
@@ -153,7 +156,10 @@ SMODS.ObjectType({
         ["j_horse_horsecube"] = true,
         ["j_horse_giraffe"] = true,
         ["j_horse_deadhorse"] = true,
-        ["j_horse_fauxbrownhorse"] = true
+        ["j_horse_fauxbrownhorse"] = true,
+        ["j_horse_househorse"] = true,
+        ["j_horse_shyhorse"] = true,
+        ["j_horse_cringehorse"] = true
     },
 })
 

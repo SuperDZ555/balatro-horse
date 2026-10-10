@@ -7,7 +7,7 @@
   "description": "adds horses (horse sprites by @flechadafoxy)",
   "prefix": "horse",
   "main_file": "main.lua",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "priority": 0,
   "badge_colour": "A37261",
   "badge_text_colour": "FFFFFF",
