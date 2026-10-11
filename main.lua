@@ -83,16 +83,22 @@ if true then
     assert(SMODS.load_file("jokers/giraffe.lua"))()
     assert(SMODS.load_file("jokers/deadhorse.lua"))()
     assert(SMODS.load_file("jokers/fauxbrownhorse.lua"))()
-    assert(SMODS.load_file("jokers/themareofmaws.lua"))()
+    assert(SMODS.load_file("jokers/househorse.lua"))()
+    assert(SMODS.load_file("jokers/shyhorse.lua"))()
+    assert(SMODS.load_file("jokers/cringehorse.lua"))()
+    assert(SMODS.load_file("jokers/greenandkindhorse.lua"))()
+    assert(SMODS.load_file("jokers/horsejapan.lua"))()
+    assert(SMODS.load_file("jokers/horsehell1999.lua"))()
+    assert(SMODS.load_file("jokers/qorse.lua"))()
+	assert(SMODS.load_file("jokers/themareofmaws.lua"))()
     assert(SMODS.load_file("jokers/theartist.lua"))()
     assert(SMODS.load_file("jokers/theshapeshifter.lua"))()
     assert(SMODS.load_file("jokers/thechildofvoid.lua"))()
     assert(SMODS.load_file("jokers/theflower.lua"))()
     assert(SMODS.load_file("jokers/thecreature.lua"))()
     assert(SMODS.load_file("jokers/thesharktailedhorse.lua"))()
-	assert(SMODS.load_file("jokers/househorse.lua"))()
-    assert(SMODS.load_file("jokers/shyhorse.lua"))()
-    assert(SMODS.load_file("jokers/cringehorse.lua"))()
+    assert(SMODS.load_file("jokers/theyellowandgreen.lua"))()
+    assert(SMODS.load_file("jokers/thebiologyproject.lua"))()
 end
 
 --load sounds
@@ -159,7 +165,11 @@ SMODS.ObjectType({
         ["j_horse_fauxbrownhorse"] = true,
         ["j_horse_househorse"] = true,
         ["j_horse_shyhorse"] = true,
-        ["j_horse_cringehorse"] = true
+        ["j_horse_cringehorse"] = true,
+        ["j_horse_greenandkindhorse"] = true,
+        ["j_horse_horsejapan"] = true,
+        ["j_horse_horsehell1999"] = true,
+        ["j_horse_qorse"] = true
     },
 })
 
@@ -185,7 +195,12 @@ SMODS.ObjectType({
         ["j_horse_scribblehorse"] = true,
         ["j_horse_winterponyhorse"] = true,
         ["j_horse_hooorse"] = true,
-        ["j_horse_blurryhorse"] = true
+        ["j_horse_blurryhorse"] = true,
+		["j_horse_baldhorse"] = true,
+		["j_horse_blackandbluehorse"] = true,
+		["j_horse_greenandkindhorse"] = true,
+		["j_horse_horsejapan"] = true,
+		["j_horse_whiteandgoldhorse"] = true
     },
 })
 
@@ -212,7 +227,9 @@ SMODS.ObjectType({
         ["j_horse_thechildofvoid"] = true,
         ["j_horse_theflower"] = true,
         ["j_horse_thecreature"] = true,
-        ["j_horse_thesharktailedhorse"] = true
+        ["j_horse_thesharktailedhorse"] = true,
+        ["j_horse_theyellowandgreen"] = true,
+        ["j_horse_thebiologyproject"] = true
     },
 })
 

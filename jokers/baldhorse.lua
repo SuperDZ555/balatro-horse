@@ -34,7 +34,7 @@ SMODS.Joker{ --Bald Horse
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["horse_horse_jokers"] = true },
+    pools = { ["horse_horse_jokers"] = true, ["horse_common_horses"] = true },
     
     loc_vars = function(self, info_queue, card)
         

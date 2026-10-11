@@ -25,7 +25,7 @@ SMODS.Joker{ --Realistic Horse
     },
     cost = 13,
     rarity = 3,
-    blueprint_compat = false,
+    blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
     unlocked = true,

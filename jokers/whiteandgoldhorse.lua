@@ -34,7 +34,7 @@ SMODS.Joker{ --White and Gold Horse
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["horse_horse_jokers"] = true },
+    pools = { ["horse_horse_jokers"] = true, ["horse_common_horses"] = true },
     
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.hand and not context.end_of_round  then
