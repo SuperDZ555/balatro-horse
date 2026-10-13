@@ -24,6 +24,22 @@ SMODS.Atlas({
     atlas_table = "ASSET_ATLAS"
 })
 
+SMODS.Atlas({
+    key = "CustomDecks", 
+    path = "CustomDecks.png", 
+    px = 71,
+    py = 95, 
+    atlas_table = "ASSET_ATLAS",
+	default_weight = 0
+})
+
+SMODS.Rarity({
+    key = "Special",
+	loc_txt = "Special",
+	badge_colour = HEX('fcb3f9'),
+	badge_text_colour = HEX('ffffff')
+})
+
 local NFS = require("nativefs")
 to_big = to_big or function(a) return a end
 lenient_bignum = lenient_bignum or function(a) return a end
@@ -90,6 +106,17 @@ if true then
     assert(SMODS.load_file("jokers/horsejapan.lua"))()
     assert(SMODS.load_file("jokers/horsehell1999.lua"))()
     assert(SMODS.load_file("jokers/qorse.lua"))()
+    assert(SMODS.load_file("jokers/cornbreadhorse.lua"))()
+    assert(SMODS.load_file("jokers/cocoahorse.lua"))()
+    assert(SMODS.load_file("jokers/steamhorse.lua"))()
+    assert(SMODS.load_file("jokers/rainbowhorse.lua"))()
+    assert(SMODS.load_file("jokers/aurahorse.lua"))()
+    assert(SMODS.load_file("jokers/threedimensionalhorse.lua"))()
+    assert(SMODS.load_file("jokers/dumbassfuckingunicorn.lua"))()
+    assert(SMODS.load_file("jokers/bronzehorse.lua"))()
+    assert(SMODS.load_file("jokers/silverhorse.lua"))()
+    assert(SMODS.load_file("jokers/goldenhorse.lua"))()
+    assert(SMODS.load_file("jokers/racehorse.lua"))()
 	assert(SMODS.load_file("jokers/themareofmaws.lua"))()
     assert(SMODS.load_file("jokers/theartist.lua"))()
     assert(SMODS.load_file("jokers/theshapeshifter.lua"))()
@@ -97,8 +124,13 @@ if true then
     assert(SMODS.load_file("jokers/theflower.lua"))()
     assert(SMODS.load_file("jokers/thecreature.lua"))()
     assert(SMODS.load_file("jokers/thesharktailedhorse.lua"))()
-    assert(SMODS.load_file("jokers/theyellowandgreen.lua"))()
+	assert(SMODS.load_file("jokers/theyellowandgreen.lua"))()
     assert(SMODS.load_file("jokers/thebiologyproject.lua"))()
+	assert(SMODS.load_file("jokers/themeower.lua"))()
+end
+-- load the deck
+if true then
+	assert(SMODS.load_file("decks/race_deck.lua"))()
 end
 
 --load sounds
@@ -169,7 +201,14 @@ SMODS.ObjectType({
         ["j_horse_greenandkindhorse"] = true,
         ["j_horse_horsejapan"] = true,
         ["j_horse_horsehell1999"] = true,
-        ["j_horse_qorse"] = true
+        ["j_horse_qorse"] = true,
+        ["j_horse_cornbreadhorse"] = true,
+        ["j_horse_cocoahorse"] = true,
+        ["j_horse_steamhorse"] = true,
+        ["j_horse_rainbowhorse"] = true,
+        ["j_horse_aurahorse"] = true,
+        ["j_horse_threedimensionalhorse"] = true,
+        ["j_horse_dumbassfuckingunicorn"] = true
     },
 })
 
@@ -196,11 +235,10 @@ SMODS.ObjectType({
         ["j_horse_winterponyhorse"] = true,
         ["j_horse_hooorse"] = true,
         ["j_horse_blurryhorse"] = true,
-		["j_horse_baldhorse"] = true,
-		["j_horse_blackandbluehorse"] = true,
-		["j_horse_greenandkindhorse"] = true,
-		["j_horse_horsejapan"] = true,
-		["j_horse_whiteandgoldhorse"] = true
+        ["j_horse_cornbreadhorse"] = true,
+        ["j_horse_cocoahorse"] = true,
+        ["j_horse_steamhorse"] = true,
+        ["j_horse_dumbassfuckingunicorn"] = true
     },
 })
 
@@ -229,7 +267,18 @@ SMODS.ObjectType({
         ["j_horse_thecreature"] = true,
         ["j_horse_thesharktailedhorse"] = true,
         ["j_horse_theyellowandgreen"] = true,
-        ["j_horse_thebiologyproject"] = true
+        ["j_horse_thebiologyproject"] = true,
+        ["j_horse_themeower"] = true
+    },
+})
+
+SMODS.ObjectType({
+    key = "horse_race_horse_jokers",
+    cards = {
+        ["j_horse_bronzehorse"] = true,
+        ["j_horse_silverhorse"] = true,
+        ["j_horse_goldenhorse"] = true,
+        ["j_horse_racehorse"] = true
     },
 })
 

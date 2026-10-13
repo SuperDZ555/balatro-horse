@@ -9,7 +9,7 @@ SMODS.Joker{ --Shy Horse
     loc_txt = {
         ['name'] = 'Shy Horse',
         ['text'] = {
-            [1] = '{C:red}+12{} Mult for every card {C:attention}less than 5{} played'
+            [1] = '{C:red}+9{} Mult for every card {C:attention}less than 5{} played'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -36,7 +36,7 @@ SMODS.Joker{ --Shy Horse
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             return {
-                mult = 60 - (#context.full_hand * 12)
+                mult = 45 - (#context.full_hand * 9)
             }
         end
     end
